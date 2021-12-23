@@ -1,0 +1,14 @@
+{
+  "name": "ultra_balkan_alpha-master",
+  "version": "v0.1",
+  "description": "A design system for building faithful recreations of old UIs",
+  "scripts": {
+    "build": "node build.js",
+    "deploy:docs": "npm run build && gh-pages -d dist",
+    "release": "npm run build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzoj/ultra_balkan_alpha-master.git"
+  }
+}
