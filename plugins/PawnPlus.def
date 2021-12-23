@@ -1,9 +1,0 @@
-LIBRARY	"PawnPlus"
-
-EXPORTS
-	Supports
-	Load
-	Unload
-	AmxLoad
-	AmxUnload
-	ProcessTick
