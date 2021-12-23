@@ -1,0 +1,133 @@
+//===============================[ POCETAK MODA ]===============================
+- Napravljen Reg/log sistem
+- Dodati osnovni definovi uz to
+- Dodat spawn igraca
+- Napravljen Admin sistem
+- Napravljena komanda /kick
+- Napravljena komanda /a
+- Napravljena Admin baza
+- Dodat spawn za Admin bazu
+
+//================================[ v0.2 ]======================================
+- Napravljene dodatne sigurnosne provjere
+- Napravljene komande /aduty i /adutyoff
+- Sredjen bug sa skinom (bice to jos doradjeno malo)
+- Napravljena /ah komanda
+- Napravljena /stats komanda (naravno ovakav stats nece biti stalno bice promijenjen i usavrsen)
+- Napravljena komanda /veh za Admin vozila
+- Dodati dialozi za Spol Godine i Drzavu u register sistem
+- Pri pokretanju moda dodato "Verzija moda" i "Zadnji update"
+- Dodat TextDraw Ultra Balkan v0.2
+- Dodat textdraw za sat i datum
+- Uradjen sistem sata i datuma
+- Dodat Level sistem
+- Dodane jos neke dodatne boje za skriptu
+- Dodata poruka za clanove Admina kada se spawnaju
+- Uradjene male izmjene oko /a chata
+- Izmapan spawn obicnih igraca
+- Popravljeni ostali bugovi
+- Napravljena provjera imena igraca prije registriranja (ako je recimo "Dolke" izbaci ga)
+- Dodana komanda /pay
+- Dodana komanda /cc
+- Dodana komanda /setskin
+- Namjesten radius global chata (na koliko da se vidi sta igraci pisu)
+- Namjesten radius igracevog imena (na koliko m da se vidi igracevo ime)
+- Promijenjen chat na format [ID] Ime kaze: nesto u radijusu od 20m
+- Svim igracima na srw Podesena bijela boja imena
+
+//================================[ v0.3 ]======================================
+
+- Izmapana Banka
+- Izmapan int Banke
+- Napravljen ulaz i izlaz u Banku
+- Dodan label na ulazu Banke
+- Dodana ikonica Banke na mapi
+- Napravljen Bank sistem
+- Napravljen td za banku i novac na banci povezan sa tim td-om
+- Izmapana Auto Skola
+- Izmapan int Auto Skole
+- Napravljen sistem polaganja 
+- Izmapana opstina 
+- Izmapan int opstine
+- Napravljen ulaz i izlaz u opstinu
+- Dodan label na ulazu u Opstinu
+- Dodana ikonica Opstine na mapi 
+- Napravljena /goto komanda 
+- Napravljeni portovi: /gotospawn /gotoautosk /gotobg /gotobank /gotoburg /gotoab
+- Napravljena org PD sa svim komandama za org
+- Ubacen JunkBuster AC
+- Promijenjeno kada se igrac spawn posle reg nece mu vise pisati vi ste musko..tj. obrisace mu se chat
+- Dodan pocetni kapital na srw (5k u ruci i u banci)
+- Iskljucena vidljivost igraca na srw tj. na maloj mapi
+- Tokom logina i registracije promijenjena pozicija kamere
+- Dodana Admin vozila u Admin bazu (mogu ih samo admini voziti)
+- Napravljen posao Dostavljac lijekova
+- Dodani rent motori na spawn i kod auto skole (dodace se i na drugim javnim mjestima)
+- Uradjen rent system
+- Napravljen label na rent autima [ RENT VOZILO ]
+- Iskljuceni stuntovi
+- Iskljuceni zuti markeri na ammu i ostalim shopovima
+- Dodana komanda /otkaz
+- Dodana komanda /takejob za sve poslove
+- Dodan label u opstini na mjestu otkaza
+- Dodana komanda /spec
+- Dodana komanda /specoff
+- Uradjene izmjene oko Login i Register dialoga
+- Uradjene dopune i izmjene oko PayDay sistema
+- Popravljeni bugovi oko JunkBustera i preveden na SRP (nije cijeli)
+- Dodana komanda /setstats kojom samo VLASNIK moze da setuje igracu stats
+- Kada ukucamo pogresnu komandu nece vise pisati "Unknown Command"
+- Dodana komanda /gmx za restartovanje servera
+- POPRAVLJENI SVI BUGOVI KOJE SAM NASAO
+
+//=============================[ v0.4 ]=========================================
+
+- [x] Mod prebačen u MySQL sistem čuvanja
+- [x] Napravljen engine sistem
+- [x] Napravljen pojas sistem `/pojas`
+- [x] Napravljen kaciga sistem `/kaciga`
+- [x] Dodane organizacije SAJ,Bolnicari i Los Surenos 13
+- [x] Dodat sistem slotova za admine, lidere i clanove organizacija
+- [x] Dodana komanda `/clearmemberslot` kojom se cisti slot igraca u organizaciji
+- [x] Kod komande `/clearmemberslot` napravljena provjera ako je igrac online, trebamo koristiti komandu `/uninvite`
+- [x] Svaki clan,lider ili admin kojem je ociscen slot dok je offline, pri ulasku u igricu skida mu se admin,lider ili clan
+- [x] Dodane dodatne provjere kod komande `/invite` i `/uninvite` `/clearmemberslot`
+- [x] Dodane komande za policiju kao što su `/duty` `/cuff` `/ubaci` `/su` `/arrest`
+- [x] Dodan sistem tazera. Šokira igrača kako bi ga policajac mogao uhapsiti
+- [x] Dodan sistem hapsenja. Hapsiti može član policije ili SAJ-a
+- [x] Potpuno izmijenjena komanda `/makeadmin`
+- [x] Dodana komanda `/clearadmin`koja čisti slot admina bez obzira da li je igrac online ili ne
+- [x] Prerađen PayDay sistem i integrisan sa MySQLom
+- [x] Totalno promijenjen TD sata i datuma
+- [x] Izmapana Granica
+- [x] Dodana komanda `/granica` za prelaz granice
+- [x] Dodan pasos sistem, ako nemate pasos ne mozete prijeci granicu
+- [x] Dodana komanda `/radio`
+- [x] Dodani labeli u Auto Skoli (enterijeru)
+- [x] Dodan Wanted Level sistem
+- [x] Dodana Pljacka Banke
+- [x] Dodan Zatvor sistem
+- [x] Izmapan Zatvor
+- [x] Uradjene neke ispravke i dopune oko tekstova
+- [x] Izmapan posao Deminer
+- [x] Uradjen sistem minskog polja 
+- [x] Napravljen posao Deminer
+- [x] Napravljena komanda `/deminiraj`
+- [x] Napravljena komanda `/oprema` za uzimanje opreme kod deminera
+- [x] Napravljena komanda `/skiniopremu` za skidanje opreme kod deminera
+- [x] Napravljena komanda `/izvadiminu` za deminiranje
+- [x] Dodani 3D labeli za `/takejob` i `/oprema` kod deminera
+- [x] Dodani 3D labeli oko posla deminer za upozorenje na mine
+- [x] Promijenjen skin Admin-a na 217 jer ce se 294 skin koristiti
+- [x] Dodana provjera pri komandi /pay da ne moze placati ako je manji lvl od 3
+- [x] Napravljena komanda `/sethp` koja setuje hp igracu
+- [x] Dodana mala pomoc oko `/makeadmin` komande
+- [x] Dopunjen tekst u dialogu za uplatu polaganja
+- [x] Dodana mapa "Izgradnja zgrade" kod bolnice
+- [x] Dodana mala mapa kod trga bolnice
+- [x] Dodan tekst dobrodoslice pri prvom spawnu
+- [x] Dodani novi tdovi sata datuma i promijenjena boja gornjih TD-ova u narandžastu
+- [x] Sve komande prebacene iz ZCMD u YCMD
+- [x] Od sada se igrac spawna sa punim heltom a ne sa pola (nmp. zasto sam stavio sa pola)
+- [x] Junkbuster prebacen sa verzije v10 na v11
+- [x] POPRAVLJENI SVI BUGOVI KOJE SAM PRONAŠAO

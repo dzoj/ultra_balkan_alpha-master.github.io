@@ -1,0 +1,2 @@
+SetSpawnInfo(playerid, 0, 24, 1642.3303,-2331.0955,13.5469,89.6386, 0, 0, 0, 0, 0, 0);
+			SpawnPlayer(playerid);
