@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <!-- https://dzoj.github.io/ultra_balkan_alpha-master/blob/html/login/style.css -->
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link rel="stylesheet" type="text/css" href="https://dzoj.github.io/ultra_balkan_alpha-master.github.io/login/style.css" />
 
-        <title>Passwordww</title>
+        <title>Password</title>
 
         <style>
             body {
@@ -20,20 +20,20 @@
     <body>
         <div id="window" class="window" style="width: 300px">
             <div class="title-bar">
-                <div class="title-bar-text">Access the server</div>
+                <div class="title-bar-text">Pristupite serveru</div>
                 <div class="title-bar-controls">
-                    <button aria-label="Close" onclick="onCloseClick(this)"></button>
+                    <button aria-label="Zatvori" onclick="onCloseClick(this)"></button>
                 </div>
             </div>
             <div class="window-body">
                 <div class="field-row">
-                    <label for="pwd">Enter the server password</label>
+                    <label for="pwd">Upišite šifru servera</label>
                     <input id="pwd" type="text" />
                 </div>
                 <button id="try-btn" onclick="onTryClick(this)">Try</button>
                 <div class="status-bar">
-                    <p class="status-bar-field">Server response:</p>
-                    <p id="res" class="status-bar-field">None</p>
+                    <p class="status-bar-field">Odgovor servera:</p>
+                    <p id="res" class="status-bar-field">Nema</p>
                 </div>
             </div>
         </div>
@@ -62,7 +62,7 @@
 
             cef.on('pwd:response', (response) => {
                 if (response == PWD_OK) {
-                    serverResponse.innerText = 'OK';
+                    serverResponse.innerText = 'Uredu, prozor se zatvara.';
 
                     setTimeout(() => {
                         promptWnd.style.display = 'none'; // hide a window
@@ -70,7 +70,7 @@
                     }, 5000);
                 } else {
                     tryButton.disabled = false;
-                    serverResponse.innerText = 'Wrong password';
+                    serverResponse.innerText = 'Pogrešna lozinka.';
                 }
             });
         </script>
