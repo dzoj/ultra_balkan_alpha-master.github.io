@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="https://dzoj.github.io/ultra_balkan_alpha-master.github.io/login1/style.css" /> <!-- https://dzoj.github.io/ultra_balkan_alpha-master.github.io/login/style.css -->
+
+    </head>
+
+    <body>
+        <h1>PRIJAVA</h1>
+        <div class="shape1">
+            <br /><br /><br /><br />Dobrodosli ponovno na server, <br />morate upisati vasu lozinku.
+            <label for="password"><br />Upisite vasu lozinku:</label>
+            <br /><br />
+            <input id="password" type="text" />
+            <br /><br />
+            <button class="button" id="trybutton" onclick="onTryClick()">Login</button>
+            <br /><br />
+            <p id="res">Imate 3 pokusaja nakon cega<br />vas izbacuje sa servera.</p>
+        </div>
+        <div class="shape2"></div>
+        <script>
+            const password_ok = 1;
+            const password_wrong = 1;
+
+            const passwordfield = document.getElementById("password");
+            function onCloseClick(event) {
+                cef.emit('password:close');
+            }
+            function onTryClick() {
+                const pwd = passwordfield.value;
+
+                if (pwd.length > 0) {
+                    
+                    document.getElementById("trybutton").style.opacity = 0.6;
+                    document.getElementById("trybutton").style.cursor = "not-allowed";
+                    cef.emit('password:try', pwd);
+                }
+            }
+            cef.on('pwd:response', (response, pokusaji) => {
+                if (response == password_ok) {
+                    document.getElementById('res').innerText = 'Upisali ste sifru koja se poklapa s sifrom vaseg naloga, sacekajte koji trenutak.';
+                    
+                    setTimeout(() => {
+                        document.getElementById('window').style.display = 'none';
+                        cef.set_focus(false);
+                    }, 5000);
+                } else {
+                    document.getElementById("trybutton").style.opacity = 0.0;
+                    document.getElementById("trybutton").style.cursos = "pointer";
+                    document.getElementById('res').innerText = 'Pogresna lozinka |' + pokusaji + '/3 pokusaja.';
+                }
+            });
+        </script>
+    </body>
+</html>
