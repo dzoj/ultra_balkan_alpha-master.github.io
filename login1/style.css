@@ -1,5 +1,8 @@
-@import url("https://dzoj.github.io/ultra_balkan_alpha-master.github.io/login1/Pushster-Regular.ttf");
-
+@font-face {
+    font-family: 'Pushster-Regular';
+    src: url("https://dzoj.github.io/ultra_balkan_alpha-master.github.io/login1/Pushster-Regular.ttf");
+}
+   
 h1 {
     font-family: 'Pushster-Regular';
     color: rgb(235, 200, 110);
