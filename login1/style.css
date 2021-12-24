@@ -1,7 +1,7 @@
 @import url("https://dzoj.github.io/ultra_balkan_alpha-master.github.io/login1/Pushster-Regular.ttf");
 
 h1 {
-    font-family: 'Pushster';
+    font-family: 'Pushster-Regular';
     color: rgb(235, 200, 110);
 }
 body {
@@ -18,7 +18,7 @@ body {
     margin: 37% auto;
     margin-top: 5px;
     border-radius: 25%;
-    font-family: 'Pushster';
+    font-family: 'Pushster-Regular';
 }
 .button {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
