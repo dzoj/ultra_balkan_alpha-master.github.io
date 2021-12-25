@@ -19,7 +19,7 @@
                 <p id="text" style="color: red; display: none;">Caps lock je upaljen!</p>
             </form>
             <br />
-            <button class="button" id="trybutton" onclick="onTryClick()">Login</button>
+            <button class="button" id="trybutton" onclick="onTryClick(this)">Login</button>
             <br />
             <p id="res">Imate 3 pokusaja nakon cega<br />vas izbacuje sa servera.</p>
         </div>
@@ -38,7 +38,7 @@
                     text.style.display = "none"
                 }
             });
-            function onTryClick() {
+            function onTryClick(event) {
                 const pwd = passwordfield.value;
 
                 if (pwd.length > 0) {
@@ -50,7 +50,7 @@
             }
             cef.on('password:response', (response) => {
                 if (response == password_ok) {
-                    document.getElementById('res').innerText = 'Upisali ste sifru koja se poklapa' + document.write('<br />') + 's sifrom vaseg naloga, sacekajte' + document.write('<br/>') +'koji trenutak.';
+                    document.getElementById('res').innerText = 'Upisali ste dobru sifru.';
                     
                     setTimeout(() => {
                         document.getElementById('shape1').style.display = 'none';
