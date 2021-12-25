@@ -48,7 +48,7 @@
                     cef.emit('password:try', pwd);
                 }
             }
-            cef.on('pwd:response', (response, pokusaji) => {
+            cef.on('password:response', (response) => {
                 if (response == password_ok) {
                     document.getElementById('res').innerText = 'Upisali ste sifru koja se poklapa' + document.write('<br />') + 's sifrom vaseg naloga, sacekajte' + document.write('<br/>') +'koji trenutak.';
                     
