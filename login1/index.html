@@ -48,7 +48,7 @@
                     cef.emit('password:try', pwd);
                 }
             }
-            cef.on('password:response', (response, pokusaji) => {
+            cef.on('password:response', (response, pokusaji=1) => {
                 if (response == password_ok) {
                     document.getElementById('res').innerText = 'Upisali ste dobru sifru.';
                     
