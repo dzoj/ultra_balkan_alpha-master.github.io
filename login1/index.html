@@ -4,20 +4,23 @@
         <title>Login</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" type="text/css" href="https://dzoj.github.io/ultra_balkan_alpha-master.github.io/login1/style.css" /> <!-- https://dzoj.github.io/ultra_balkan_alpha-master.github.io/login/style.css -->
+        <link rel="stylesheet" type="text/css" href="https://dzoj.github.io/ultra_balkan_alpha-master.github.io/login1/style.css" /> <!-- https://dzoj.github.io/ultra_balkan_alpha-master.github.io/login1/style.css -->
 
     </head>
 
     <body>
         <h1>PRIJAVA</h1>
         <div class="shape1">
-            <br /><br /><br /><br />Dobrodosli ponovno na server, <br />morate upisati vasu lozinku.
-            <label for="password"><br />Upisite vasu lozinku:</label>
-            <br /><br />
-            <input id="password" type="text" />
-            <br /><br />
+            <br /><br /><br />Dobrodosli ponovno na server, <br />morate upisati vasu lozinku.
+            <form>
+                <label for="password"><br />Upisite vasu lozinku:</label>
+                <br /><br />
+                <input type="password" id="password" name="password" />
+                <p id="text" style="color: red; display: none;">Caps lock je upaljen!</p>
+            </form>
+            <br />
             <button class="button" id="trybutton" onclick="onTryClick()">Login</button>
-            <br /><br />
+            <br />
             <p id="res">Imate 3 pokusaja nakon cega<br />vas izbacuje sa servera.</p>
         </div>
         <div class="shape2"></div>
@@ -26,9 +29,15 @@
             const password_wrong = 1;
 
             const passwordfield = document.getElementById("password");
-            function onCloseClick(event) {
-                cef.emit('password:close');
-            }
+            const input = document.getElementById("password");
+            const text = document.getElementById("text");
+            input.addEventListener("keyup", function(event) {
+                if (event.getModifierState("CapsLock")) {
+                    text.style.display = "block";
+                } else {
+                    text.style.display = "none"
+                }
+            });
             function onTryClick() {
                 const pwd = passwordfield.value;
 
@@ -41,10 +50,10 @@
             }
             cef.on('pwd:response', (response, pokusaji) => {
                 if (response == password_ok) {
-                    document.getElementById('res').innerText = 'Upisali ste sifru koja se poklapa s sifrom vaseg naloga, sacekajte koji trenutak.';
+                    document.getElementById('res').innerText = 'Upisali ste sifru koja se poklapa' + document.write('<br />') + 's sifrom vaseg naloga, sacekajte' + document.write('<br/>') +'koji trenutak.';
                     
                     setTimeout(() => {
-                        document.getElementById('window').style.display = 'none';
+                        document.getElementById('shape1').style.display = 'none';
                         cef.set_focus(false);
                     }, 5000);
                 } else {

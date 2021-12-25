@@ -8,7 +8,6 @@ h1 {
     color: rgb(235, 200, 110);
 }
 body {
-    color: yellow;
     text-align: center;
     font-size: 1.2rem;
 }
@@ -35,7 +34,22 @@ body {
     width: 90px;
     height: 55px;
     cursor: pointer;
-    margin: 5px;
+    margin: 5px auto;
+    font-family: 'Pushster-Regular';
+}
+input[type=password] {
+    width: 125px;
+    padding: 10px 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    color: rgb(250, 195, 57);
+}
+input[type=password]:focus {
+    background-color: rgb(250, 195, 57);
+    color: white;
 }
 /*
 .shape2 {
