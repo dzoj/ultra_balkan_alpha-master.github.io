@@ -61,7 +61,6 @@
                     }, 5000);
                 } else {
                     if( pokusaji == 3 ) { 
-                        cef.set_focus(false);
                         document.getElementById('res').innerHTML = "Upisali ste pogresnu sifru" + "<br />" + "i izbaceni ste sa servera";
                     }
                     else 
@@ -72,7 +71,6 @@
                         document.getElementById("trybutton").style.opacity = 1;
                         document.getElementById("trybutton").style.cursos = "pointer";
                         document.getElementById('res').innerText = message;
-                    
                     }
                     cef.emit('password:wrong', pokusaji); 
                 }
