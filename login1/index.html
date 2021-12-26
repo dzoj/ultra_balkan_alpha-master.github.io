@@ -48,7 +48,7 @@
                     cef.emit('password:try', pwd);
                 }
             }
-            cef.on('password:response', (response, pokusaji=1) => {
+            cef.on('password:response', (response, pokusaji=0) => {
                 if (response == password_ok) {
                     document.getElementById('res').innerText = 'Upisali ste dobru sifru.';
                     
@@ -58,10 +58,18 @@
                         cef.set_focus(false);
                     }, 5000);
                 } else {
-                    const message = `Pogresna lozinka | ${pokusaji}/3`;
-                    document.getElementById("trybutton").style.opacity = 1;
-                    document.getElementById("trybutton").style.cursos = "pointer";
-                    document.getElementById('res').innerText = message;
+                    if( pokusaji == 3 ) { 
+                        document.getElementById('res').innerHTML = "Upisali ste pogresnu sifru" + "<br />" + "i izbaceni ste sa servera";
+                        cef.emit('password:wrong'); 
+                    }
+                    else 
+                    {
+                        pokusaji++;
+                        const message = `Pogresna lozinka | ${pokusaji}/3`;
+                        document.getElementById("trybutton").style.opacity = 1;
+                        document.getElementById("trybutton").style.cursos = "pointer";
+                        document.getElementById('res').innerText = message;
+                    }
                 }
             });
         </script>
