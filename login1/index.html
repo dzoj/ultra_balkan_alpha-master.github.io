@@ -68,8 +68,8 @@
                         document.getElementById("trybutton").style.opacity = 1;
                         document.getElementById("trybutton").style.cursos = "pointer";
                         document.getElementById('res').innerText = message;
+                        cef.emit('password:wrong', pokusaji); 
                     }
-                    cef.emit('password:wrong', pokusaji); 
                 }
             });
         </script>
