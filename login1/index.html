@@ -58,9 +58,10 @@
                         cef.set_focus(false);
                     }, 5000);
                 } else {
+                    const message = `Pogresna lozinka | ${pokusaji}/3`;
                     document.getElementById("trybutton").style.opacity = 1;
                     document.getElementById("trybutton").style.cursos = "pointer";
-                    document.getElementById('res').innerText = 'Pogresna lozinka | ${pokusaji}/3 pokusaja.';
+                    document.getElementById('res').innerText = message;
                 }
             });
         </script>
