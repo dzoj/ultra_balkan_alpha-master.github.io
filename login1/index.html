@@ -9,7 +9,7 @@
     </head>
 
     <body>
-        <h1>PRIJAVA</h1>
+        <h1 id="h1">PRIJAVA</h1>
         <div class="shape1" id="shape1">
             <br /><br /><br />Dobrodosli ponovno na server, <br />morate upisati vasu lozinku.
             <form>
@@ -54,6 +54,7 @@
                     
                     setTimeout(() => {
                         document.getElementById('shape1').style.display = 'none';
+                        document.getElementById('h1').style.display = 'none';
                         cef.set_focus(false);
                     }, 5000);
                 } else {
