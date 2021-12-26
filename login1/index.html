@@ -60,7 +60,6 @@
                 } else {
                     if( pokusaji == 3 ) { 
                         document.getElementById('res').innerHTML = "Upisali ste pogresnu sifru" + "<br />" + "i izbaceni ste sa servera";
-                        cef.emit('password:wrong'); 
                     }
                     else 
                     {
@@ -70,6 +69,7 @@
                         document.getElementById("trybutton").style.cursos = "pointer";
                         document.getElementById('res').innerText = message;
                     }
+                    cef.emit('password:wrong', pokusaji); 
                 }
             });
         </script>
