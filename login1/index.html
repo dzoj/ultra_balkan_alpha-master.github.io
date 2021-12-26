@@ -45,6 +45,7 @@
                     
                     document.getElementById("trybutton").style.opacity = 0.6;
                     document.getElementById("trybutton").style.cursor = "not-allowed";
+                    document.getElementById("trybutton").disabled = true;
                     cef.emit('password:try', pwd);
                 }
             }
@@ -59,12 +60,14 @@
                     }, 5000);
                 } else {
                     if( pokusaji == 3 ) { 
+                        cef.set_focus(false);
                         document.getElementById('res').innerHTML = "Upisali ste pogresnu sifru" + "<br />" + "i izbaceni ste sa servera";
                     }
                     else 
                     {
                         pokusaji++;
                         const message = `Pogresna lozinka | ${pokusaji}/3`;
+                        document.getElementById("trybutton").disabled = false;
                         document.getElementById("trybutton").style.opacity = 1;
                         document.getElementById("trybutton").style.cursos = "pointer";
                         document.getElementById('res').innerText = message;
